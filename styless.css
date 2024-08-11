@@ -1,0 +1,293 @@
+main {
+    margin-top: 60px; /* add this line */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0; */
+}
+
+header {
+    padding-right: -50px;
+    z-index: 3; 
+    height: 70px;
+    position: fixed; /* add this line */
+    top: -13px; /* add this line */
+    width: 100%; /* add this line */
+    /* add this line */
+    background-color: #ffffff;
+    color: rgb(6, 0, 0);
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+header .logo {
+    width: 20%; /* reduced width to push logo further left */
+    margin-left: 20px; /* added margin to push logo further left */
+}
+
+header .logo img {
+    height: 80px;
+    width: auto;
+}
+
+header nav {
+    width: 70%;
+    color: #333;
+    text-align: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+header nav ul li {
+    margin-left: 40px;
+    width: 250px;
+    height: 100%;
+    display:flex;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+header nav ul li button.login-btn {
+    z-index: 3;
+    margin-top: 0px;
+    width: 200px;
+    background: fixed;
+    background-color: #21b524;
+    color: #fff;
+    border: none;
+    height: 10px;
+    padding: 1em 2em;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li button.login-btn:hover {
+    background-color: #555;
+    color: white;
+}
+
+header nav ul li button.login-btn.responsive-btn {
+    padding: 0.5em 1em;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 768px) {
+    header nav ul li button.login-btn {
+        padding: 0.5em 1em;
+        font-size: 14px;
+    }
+}
+
+.intro {
+    position: relative; /* create a stacking context */
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./BG_Image-1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* blur the background image */
+    z-index: -1; /* move the pseudo-element behind the content */
+}
+
+.intro .container {
+    position: relative; /* create a stacking context for the container */
+    z-index: 1; /* move the container on top of the blurred background */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: right;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.intro h1 {
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 0;
+}
+
+.intro p {
+    font-size: 18px;
+    margin-bottom: 2em;
+}
+
+.get-started {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.get-started:hover {
+    background-color: #555;
+}
+
+.border-radius {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* .headerb {
+    /* color: #333;
+    height: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: -80px;
+    margin-right: -60px;
+    align-items: center;
+} */
+
+.extro {
+    
+    margin-top: -20px;
+    padding: 20px, 20px, 20px, 20px;
+    background-color: #fff;
+    height: 300px;
+}
+
+.extro .container {
+    padding: 20px;
+    margin-left : 40px;
+    margin-top : 80px;
+}
+/* Centered Text Section */
+.center-text {
+    width:102.7%;
+    height: 150px;
+    margin-bottom: -58px;;
+    background-color: green;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.center-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.center-text h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Crop Selection Form Section */
+.crop-selection-form {
+    margin: 50px auto;
+    margin-bottom: -55px;;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.crop-selection-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.crop-selection-form label {
+    display: block;
+    margin: 10px 0 5px;
+    width: 100%;
+}
+
+.crop-selection-form select,
+.crop-selection-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.crop-selection-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.crop-selection-form button:hover {
+    background-color: #555;
+}
+
+.head {
+    z-index: -15;
+}
+
+.end {
+    margin-left: 42%;
+    margin-top: 12.5%;
+}
